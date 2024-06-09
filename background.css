@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+audio {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(img_planeta.jpg);
+  background-position-x: center;
+  background-size: cover;
+  animation: animateImg 50s linear infinite;
+}
+
+@keyframes animateImg {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 1);
+  animation: animateStars 3s linear infinite;
+}
+
+span::before {
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #ffff, transparent);
+}
+
+@keyframes animateStars {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+span:nth-child(1) {
+  top: 30px;
+  right: 300px;
+  animation-duration: 2s;
+  animation-delay: 0;
+}
+
+span:nth-child(2) {
+  top: 120px;
+  right: 90px;
+  left: initial;
+  animation-duration: 3s;
+  animation-delay: -0.3s;
+}
+
+span:nth-child(3) {
+  top: 60px;
+  right: 0px;
+  left: initial;
+  animation-duration: 2s;
+  animation-delay: -0.4s;
+}
+
+span:nth-child(4) {
+  right: 0px;
+  top: 150px;
+  animation-duration: 6s;
+  animation-delay: 0.2s;
+}
+
+span:nth-child(5) {
+  top: 90px;
+  right: 50px;
+  animation-duration: 4s;
+  animation-delay: 0.4s;
+}
+
+span:nth-child(7) {
+  top: 0px;
+  right: 250px;
+  animation-duration: 5s;
+  animation-delay: -0.2s;
+}
+
+span:nth-child(8) {
+  top: 90px;
+  left: 250px;
+  animation-duration: 5s;
+  animation-delay: -0.3s;
+}
+
+span:nth-child(9) {
+  top: 10px;
+  left: 90px;
+  animation-duration: 2s;
+  animation-delay: -0.3s;
+}
